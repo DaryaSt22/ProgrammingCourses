@@ -10,7 +10,7 @@ class Category(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
 
 class Course(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=300)
     price = models.FloatField()
     students_qty = models.IntegerField()
     reviews_qty = models.IntegerField()
