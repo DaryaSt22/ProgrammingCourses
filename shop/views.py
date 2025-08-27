@@ -19,4 +19,3 @@ def single_course(request, course_id):
     # Option 2
     # course = get_list_or_404(Course, pk=course_id)
     # return render(request, 'shop/single_course.html', {'course': course})
-
