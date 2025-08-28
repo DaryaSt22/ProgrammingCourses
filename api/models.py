@@ -20,3 +20,14 @@ class CourseResource(ModelResource):
         authentication = CustomAuthentication()
         authorization = Authorization()
 
+    def hydrate(self, bundle):
+        bundle.obj.category_id = bundle.data['category_id']
+        return bundle
+
+    def dehydrate(self, bundle):
+        bundle.data['category_id'] = bundle.obj.category
+        return bundle
+
+    def dehydrate_title(self, bundle):
+        return bundle.data['title'].upper()
+
